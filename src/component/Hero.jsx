@@ -14,7 +14,7 @@ const Hero = () => {
    
   return (
     <div>
-     <VideoTitle title={displayMovie.original_title} overview={displayMovie.overview}/>
+     <VideoTitle title={displayMovie.original_title} overview={displayMovie.overview} movieId={displayMovie.id}/>
      <VideoBg movieId={displayMovie.id}/>
     </div>
   )
