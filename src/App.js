@@ -8,6 +8,7 @@ import PopularPage from "./pages/PopularPage";
 import UpcomingPage from "./pages/UpcomingPage";
 import TopRatedPage from "./pages/TopRatedPage";
 import NowPlaying from "./pages/NowPlaying";
+import PlayerPage from "./pages/PlayerPage";
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
     },{
       path:"/nowplaying",
       element:<NowPlaying/>
+    },{
+      path:"/player/:movieId",
+      element:<PlayerPage/>
     }
   ]);
 
