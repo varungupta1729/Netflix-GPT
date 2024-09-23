@@ -16,7 +16,7 @@ const LoginPage = () => {
       <div className="w-1/2 h-full  justify-center items-center flex-col hidden md:flex">
         <img src={LOGO} alt="logo" className="w-3/4" />
         <div className="font-bold text-white text-2xl">
-          Watch Movies by Netflix Made By Varun Gupta
+          Watch Movies on NetflixGPT Made By Varun Gupta
         </div>
       </div>
 
