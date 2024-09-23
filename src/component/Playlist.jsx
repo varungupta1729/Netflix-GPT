@@ -10,7 +10,7 @@ const Playlist = () => {
     // console.log(data)
   return (
     <div className='w-full bg-black'>
-      <div className='-mt-2 lg:-mt-60 relative z-10'>
+      <div className='mt-10 lg:-mt-60 relative z-10'>
       <Categories title={"Now Playing"} data={nowPlaying}/>
       <Categories title={"Upcoming Movies"} data={upcomingMovies}/>
       <Categories title={"Top Rated"} data={topRatedMovies}/>

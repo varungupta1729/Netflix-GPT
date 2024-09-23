@@ -15,7 +15,7 @@ const HomePage = () => {
   useUpcomingMovies();
   const navigate = useNavigate();
 
-  console.log(process.env.REACT_APP_FIREBASEKEY)
+  // console.log(process.env.REACT_APP_FIREBASEKEY)
   return (
     <div className="w-full">
       <Header />
