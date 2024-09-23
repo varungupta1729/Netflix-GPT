@@ -34,7 +34,7 @@ const PlayerPage = () => {
 
   return (
     <div>
-      <VideoTitle />
+      
       {
         loading ? (<Loader/>) :(<iframe
           className="w-full aspect-video"
