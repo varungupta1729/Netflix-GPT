@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { TMDB_API_OPTIONS } from "./constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addMovies, addTrailer } from "../redux/Slices/movieSlice";
 
 const useFetchMovies = () =>{
     const dispatch = useDispatch();
+    const trailer = useSelector(store=>store.movie.trailer);
     const getLatestMovies = async() =>{
         const rawData = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1' , TMDB_API_OPTIONS);
         const movie = await rawData.json();
@@ -18,7 +19,9 @@ const useFetchMovies = () =>{
       }
     
       useEffect(()=>{
-        getLatestMovies();
+        if(!trailer) getLatestMovies();
+
+        return () =>{}
       },[])
       
 }
