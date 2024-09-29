@@ -1,16 +1,33 @@
- import React, { useRef, useState } from "react";
+ import React, { useEffect, useRef, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useDispatch } from "react-redux";
 import { addSearchMovie } from "../redux/Slices/movieSlice";
 import toast from "react-hot-toast";
 import Loader from "./Loader";
 import { MOVIE_TYPE, TMDB_API_OPTIONS } from "../utils/constants";
+import useSpeechToText from 'react-hook-speech-to-text';
+import { FaMicrophone } from "react-icons/fa";
 
 const SearchBox = () => {
     const searchMovie = useRef(null);
     const dispatch = useDispatch();
     const [loading , setLoading] = useState(false);
-  
+    const {
+      error,
+      interimResult,
+      isRecording,
+      results,
+      startSpeechToText,
+      stopSpeechToText,
+    } = useSpeechToText({
+      continuous: true,
+      useLegacyResults: false
+    });
+    if (error) toast.error("Web Speech API is not available in this browser 🤷");
+    //  searchMovie.current.value = results.map((result) => (
+    //   <li className="bg-yellow-50" key={result.timestamp}>{result.transcript}</li>
+    // ))
+   
     const handleSubmit = async(e , movie) =>{
         e.preventDefault();
         try {
@@ -39,10 +56,16 @@ const SearchBox = () => {
        
     }
 
+
+   useEffect(()=>{
+    searchMovie.current.value = results.map((result)=>result.transcript);
+   },[startSpeechToText])
   return (
     <div className="w-full flex justify-center flex-col items-center">
+      
 
-    
+  <button className={`${isRecording?"bg-black text-red-600" : "bg-blue-950 text-white"}  text-2xl  p-4 rounded-full mt-10`}  onClick={isRecording ? stopSpeechToText : startSpeechToText}  ><FaMicrophone /></button>
+ <span className="font-bold">{ isRecording?"Tap to Stop" : "Tap to Search by Voice" }</span>
     <div className="w-full md:w-[70%]  lg:w-[40%] p-5 bg-black rounded-full mt-16 ">
       <form className="flex justify-center items-center">
         <input ref={searchMovie} className="text-white bg-black border w-[70%] md:w-[75%] px-3 py-2 sm:py-3 rounded-l-full" type="text" placeholder="Enter Text To Search Movies" />
