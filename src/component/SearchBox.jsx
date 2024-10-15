@@ -38,7 +38,7 @@ const SearchBox = () => {
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
       const prompt =
-        "Suggest me the five movies which is of type mentioned in the Query . Query:" +
+        "Suggest me the 20 movies which is of type mentioned in the Query . Query:" +
         searchMovie.current.value +
         ". Give me the list of which is (,) comma separated and format is strictly like the given example and not give extra text only give name of movies. Example : Stree , Golmaal , Bahubaali , Tumbad , Houseful";
       // const prompt = "Write a story about a magic backpack.";
