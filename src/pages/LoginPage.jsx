@@ -6,50 +6,41 @@ import Header from "../component/Header";
 
 const LoginPage = () => {
   const [activeLogin, setActiveLogin] = useState(true);
+
   return (
-    <div className=" bg-cover  bg-hero bg-[#0000] flex flex-col ">
-      
+    <div className="login-page flex justify-center items-center h-screen bg-[#f6f5f7]">
+      <div className="absolute top-0 w-full">
+
       <Header/>
-     
-     
-      <div className="flex w-full h-screen ">
-      <div className="w-1/2 h-full  justify-center items-center flex-col hidden md:flex">
-        <img src={LOGO} alt="logo" className="w-3/4" />
-        <div className="font-bold text-white text-2xl">
-          Watch Movies on NetflixGPT Made By Varun Gupta
+      </div>
+      <div
+        className={`container ${activeLogin ? "right-panel-active" : ""}`}
+        id="container"
+      >
+        <div class="form-container sign-up-container">
+          <SignupForm setActiveLogin={setActiveLogin}/>
+        </div>
+        <div class="form-container sign-in-container">
+        <LoginForm setActiveLogin={setActiveLogin}/>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay py-10">
+            <div class="overlay-panel overlay-left text-black">
+              
+              <iframe  style={{ width: '100%', height: '100%' , padding:'0' }}  src="https://lottie.host/embed/e3c4bb1c-5763-49f9-ab8a-c6a94dcbdf42/KDAcClNkOR.json"></iframe>
+             
+            </div>
+            <div class="overlay-panel overlay-right">
+         
+         
+              <iframe  style={{ width: '60%', height: '70%' , padding:'0' }} src="https://lottie.host/embed/51cbb3f0-7c4a-4482-9bab-f4a8912d06ab/l1aP1luqFA.json"></iframe>
+             
+
+             
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="w-full md:w-1/2 h-full  flex justify-center items-center">
-        <div className="w-full sm:w-3/4 mx-3 md:w-3/5 bg-[#00000099] p-10">
-          {activeLogin ? (
-            <>
-              <LoginForm />
-              <p
-                className="text-white cursor-pointer mt-10"
-                onClick={() => setActiveLogin(!activeLogin)}
-              >
-                New to Netflix?
-                <span className="text-[#D9232E] ml-2">Signup Now</span>
-              </p>
-            </>
-          ) : (
-            <>
-              <SignupForm />
-              <p
-                className="text-white cursor-pointer mt-10"
-                onClick={() => setActiveLogin(!activeLogin)}
-              >
-                Already Have Account?
-                <span className="text-[#D9232E] ml-2">Signin Now</span>
-              </p>
-            </>
-          )}
-        </div>
-      </div>
-
-      </div>
-     
     </div>
   );
 };

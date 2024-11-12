@@ -18,7 +18,7 @@ const Category = ({ data , title }) => {
       Go To Back
     </button>
     <div className=" flex justify-center items-center  flex-col">
-      <h2 className="text-[#D9232E] text-3xl my-10">{title}</h2>
+      <h2 className="text-[#ffbf00] text-3xl my-10">{title}</h2>
       <div className="w-full flex flex-wrap justify-center gap-10">
         {data?.map((movie) => (
           <MovieCard key={movie.id} url={movie?.poster_path} />

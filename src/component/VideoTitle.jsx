@@ -9,7 +9,7 @@ const VideoTitle = ({ title, overview , movieId}) => {
         <h1 className="text-2xl  lg:text-5xl ">{title}</h1>
         <p className="text-[0.5rem]  lg:text-base">{overview}</p>
         <div className="flex text-[0.5rem] md:text-base  gap-4">
-          <button onClick={()=> navigate('/player/'+movieId)} className="rounded  bg-white text-black px-3 py-1  lg:px-10  lg:py-2">
+          <button onClick={()=> navigate('/player/'+movieId)} className="rounded  bg-[#ffbf00] text-black px-3 py-1  lg:px-10  lg:py-2">
              Play
           </button>
           <button  onClick={()=> navigate('/player/'+movieId)} className="rounded bg-[#ffffff60] text-white py-1 px-3 lg:px-10 lg:py-2">

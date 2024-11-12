@@ -11,4 +11,308 @@
 html{
   background-color: black;
 }
+input {
+    border: none; /* Initial border */
+    outline: none; /* Remove outline on focus */
+    /* Smooth transition */
+  }
+
+
+input:focus {
+    border: none; /* Remove border on focus */
+  }
+
+/* Login Page CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.login-page h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.login-page p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .5px;
+    
+}
+.login-page p span {
+    font-size: 15px;
+    /* font-weight: 600; */
+    line-height: 20px;
+    color: rgb(16, 16, 170);
+    
+}
+
+.login-page span {
+    font-size: 12px;
+}
+
+.login-page a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.login-page .container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    /* padding:  0 50px; */
+    height: 100%;
+    justify-content: center;
   
+    text-align: center;
+}
+
+
+
+.form-container input {
+    background-color: white;
+    border-bottom: 2px solid #ffbf00;
+    color: black;
+    padding: 7px 5px;
+   
+    width: 100%;
+}
+
+.login-page button {
+    border-radius: 20px;
+    border: 1px solid #b08400,;
+    background: #ffbf00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.login-page button:active {
+    transform: scale(.95);
+}
+
+.login-page button:focus {
+    outline: none;
+}
+
+.login-page button.ghost {
+    background: transparent;
+    border-color: #000000;
+    color: #000000;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+}
+
+.overlay {
+    background: #ffbf00;
+    background: linear-gradient(to right, #ffbf00, #ffbf00) no-repeat 0 0 / cover;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateY(0);
+}
+
+.overlay-left {
+    transform: translateY(-20%);
+}
+
+/* Move signin to right */
+.container.right-panel-active .sign-in-container {
+    transform: translateY(100%);
+}
+
+/* Move overlay to left */
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+/* Bring signup over signin */
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Move overlay back to right */
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Bring back the text to center */
+.container.right-panel-active .overlay-left {
+    transform: translateY(0);
+}
+
+/* Same effect for right */
+.container.right-panel-active .overlay-right {
+    transform: translateY(20%);
+}
+
+.footer {
+	margin-top: 25px;
+	text-align: center;
+}
+
+
+.icons {
+	display: flex;
+	width: 30px;
+	height: 30px;
+	letter-spacing: 15px;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

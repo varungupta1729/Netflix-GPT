@@ -57,7 +57,8 @@ const Header = () => {
   return (
     <div className="absolute w-full z-10 flex justify-center md:justify-between px-12 py-3 bg-gradient-to-b from-black ">
       <div className={`flex justify-center items-center  md:flex-row ${toggle ? "flex-col" : "flex-row"} `}>
-        <img className="w-40 hidden md:flex " alt="logo" src={LOGO} />
+        {/* <img className="w-40 hidden md:flex " alt="logo" src={LOGO} /> */}
+        <h1 className="text-[#ffbf00] text-4xl">MovieGPT</h1>
         <div className="flex  w-screen px-6 justify-between items-center md:hidden ">
           <img className="w-32 " alt="logo" src={LOGO} />
           {!toggle ? (
@@ -121,7 +122,7 @@ const Header = () => {
             </li>
             <li>
             {
-              toggle && <button className="bg-[#D9232E] text-white py-1 px-2  rounded md:hidden" onClick={handleSignout}>Logout</button>
+              toggle && <button className="bg-[#ffbf00] text-white py-1 px-2  rounded md:hidden" onClick={handleSignout}>Logout</button>
             }
             </li>
            
@@ -134,7 +135,7 @@ const Header = () => {
           <img src={user.photoURL} alt="user" className="" />
           <p className="text-white font-bold">{user.displayName}</p>
           <button
-            className="bg-[#D9232E] p-2 text-white rounded px-3 cursor-pointer"
+            className="bg-[#ffbf00] p-2 text-white rounded px-3 cursor-pointer"
             onClick={handleSignout}
           >
             Log Out
