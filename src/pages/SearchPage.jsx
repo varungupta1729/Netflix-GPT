@@ -22,9 +22,9 @@ const SearchPage = () => {
       </div>
       <div className="w-full  flex flex-col justify-center items-center">
         <div className='w-full text-right mt-10'>
-          <button onClick={()=> navigate('/home')} className='bg-[#D9232E] text-white px-3 py-1 md:px-5 md:py-2 rounded mr-12'>HOME</button>
+          <button onClick={()=> navigate('/home')} className='bg-[#ffbf00] text-black px-3 py-1 md:px-5 md:py-2 rounded mr-12'>HOME</button>
         </div>
-      <h1 className='text-[#D9232E] text-4xl lg:text-7xl font-bold mt-10'>NETFLIXGPT</h1>
+      <h1 className='text-[#ffbf00] text-4xl lg:text-7xl font-bold mt-10'>MOVIEGPT</h1>
       <SearchBox/>
       
       <SearchMovieSpace/>

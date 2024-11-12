@@ -84,13 +84,13 @@ const SearchBox = () => {
         <form className="flex justify-center items-center">
           <input
             ref={searchMovie}
-            className="text-white bg-black border w-[70%] md:w-[75%] px-3 py-2 sm:py-3 rounded-l-full"
+            className="text-white bg-black border border-solid w-[70%] md:w-[75%] px-3 py-2 sm:py-3 rounded-l-full"
             type="text"
             placeholder="Enter Text To Search Movies"
           />
           <button
             onClick={(e) => handleSubmit(e, null)}
-            className="w-[25%] border bg-[#D9232E] rounded-r-full text-white px-10 py-3 text-[0.7rem] sm:text-base"
+            className="w-[25%] border bg-[#ffbf00] rounded-r-full text-black px-10 py-3 text-[0.7rem] sm:text-base"
             type="submit"
           >
             Search
@@ -101,7 +101,7 @@ const SearchBox = () => {
         {MOVIE_TYPE.map((movie) => (
           <button
             key={movie.id}
-            className="rounded-full bg-black text-white hover:bg-[#D9232E] px-5 py-2 text-[0.7rem] sm:text-base"
+            className="rounded-full bg-black text-white hover:bg-[#ffbf00] hover:text-black px-5 py-2 text-[0.7rem] sm:text-base"
             onClick={(e) => handleSubmit(e, movie)}
           >
             {movie}
