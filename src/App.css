@@ -237,6 +237,33 @@ input:focus {
 }
 
 
+@media(max-width:768px){
+    .overlay-container{
+       visibility: hidden;
+    }
+
+    .form-container{
+       
+        width: 100%;
+    }
+    .sign-in-container {
+        width: 100%;
+        left: 0;
+    }
+    .sign-up-container{
+        width: 100%;
+        left: 0;
+    }
+    .container.right-panel-active .sign-up-container {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 5;
+    }
+    .login-page .container{
+        margin: 0px 10px;
+    }
+}
+
 
 
 
