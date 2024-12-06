@@ -116,7 +116,7 @@ const Header = () => {
     </div>
     <div className="absolute w-full z-10  justify-center  px-7 py-5 bg-gradient-to-b from-black md:hidden  ">
       <div className="flex w-full justify-between items-center">
-      <h1 className="text-[#ffbf00] text-4xl">MovieGPT</h1>
+      <h1 className="text-[#ffbf00] text-2xl">MovieGPT</h1>
       {user&&(!toggle  ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
