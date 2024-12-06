@@ -21,8 +21,8 @@ const HomePage = () => {
       <Header />
       <Hero />
       <Playlist />
-      <div className="sticky  bottom-24 z-20 right-16">
-        <button onClick={()=> navigate('/search')} className="shadow-lg shadow-white float-right bg-white px-10 py-3 mr-16  rounded-full font-bold font-mono hover:translate-y-2">
+      <div className="sticky bottom-20 md:bottom-24 z-20 right-16">
+        <button onClick={()=> navigate('/search')} className="shadow-lg shadow-white float-right bg-white px-3 py-2 md:px-10 md:py-3 mr-4 md:mr-16  rounded-full font-bold font-mono hover:translate-y-2">
           {" "}
           AI Search
         </button>
