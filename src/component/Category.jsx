@@ -17,7 +17,7 @@ const Category = ({ data , title }) => {
     <button className="text-black bg-white px-4 py-2 rounded-full mt-10 ml-10" onClick={()=>navigate('/')}>
       Go To Back
     </button>
-    <div className=" flex justify-center items-center  flex-col">
+    <div className=" flex justify-center items-center  flex-col my-10">
       <h2 className="text-[#ffbf00] text-3xl my-10">{title}</h2>
       <div className="w-full flex flex-wrap justify-center gap-10">
         {data?.map((movie) => (
